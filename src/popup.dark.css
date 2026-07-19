@@ -1,0 +1,64 @@
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #121212; /* Fondo oscuro puro estándar de Android */
+    color: #e3e3e3; /* Texto principal claro y legible */
+    scrollbar-color: #555 #121212;
+  }
+
+  /* Corrige los textos de los labels superiores */
+  .option-container, 
+  .option label {
+    color: #e3e3e3 !important;
+  }
+
+  h1 {
+    color: #e3e3e3;
+  }
+
+  h1 > a#location {
+    color: #64b5f6; /* Azul brillante más suave para modo oscuro */
+  }
+
+  .table-container {
+    background-color: #1e1e1e;
+  }
+
+  /* Estilos mejorados para la tabla en modo oscuro */
+  .netscape-table {
+    color: #e3e3e3;
+  }
+
+  .netscape-table th {
+    background-color: #333333; /* Fondo gris oscuro para PC y móvil */
+    color: #ffffff;
+    border: solid 1px #444444;
+  }
+
+  .netscape-table td {
+    border: solid 1px #444444;
+    color: #e3e3e3 !important; /* Fuerza a que todo el texto de las cookies sea visible */
+  }
+
+  /* Alternancia de filas adaptada para el modo oscuro */
+  .netscape-table tbody tr:nth-of-type(2n) {
+    background-color: #1e1e1e; /* Filas pares: gris oscuro */
+  }
+
+  .netscape-table tbody tr:nth-of-type(2n + 1) {
+    background-color: #272727; /* Filas impares: gris ligeramente más claro (reemplaza aliceblue) */
+  }
+
+  /* Selectores e Inputs legibles */
+  select {
+    background-color: #2a2a2a;
+    color: #e3e3e3;
+    border: solid 1px #555;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  /* Sección de donación adaptada */
+  .donation summary {
+    color: #64b5f6;
+  }
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="popup.dark.css" />
+    <link rel="stylesheet" href="popup-options.css" />
+    <link rel="stylesheet" href="iconfont/material-icons.css" />
+    <link rel="stylesheet" href="donation.css" />
+    <!-- Scripts -->
+    <script src="popup.mjs" type="module" defer></script>
+    <script src="table-nowrap.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+</head>
+  </head>
+
+  <body>
+    <header>
+      <h1>Cookies to TXT for <a id="location"></a></h1>
+      <hr />
+    </header>
+    <main>
+      <div class="export-btn-container">
+        <button id="export" class="export-btn export">
+          <span class="button-text">
+            Export
+            <span class="material-symbols-outlined">download</span>
+          </span>
+        </button>
+        <button id="exportAs" class="export-btn export-as">
+          <span class="button-text">
+            Export As
+            <span class="material-symbols-outlined">download</span>
+          </span>
+        </button>
+        <button id="copy" class="export-btn copy">
+          <span class="button-text default-copy-text">
+            Copy
+            <span class="material-symbols-outlined">content_paste</span>
+          </span>
+          <span class="button-text copied-text">
+            Copied!
+            <span class="material-symbols-outlined">check</span>
+          </span>
+        </button>
+        <button id="exportAll" class="export-btn large export-all">
+          <span class="button-text">
+            Export All Cookies
+            <span class="material-symbols-outlined">download</span>
+          </span>
+        </button>
+      </div>
+
+      <div id="optionsContainer" class="option-container">
+        <div class="format-option option">
+          <label for="format">Export Format:</label>
+          <select id="format" name="format">
+            <option value="netscape" selected>Netscape</option>
+            <option value="json">JSON</option>
+            <option value="header">Header String</option>
+          </select>
+        </div>
+
+        <div class="nowrap-option option">
+          <label for="nowrapOption">Table Nowrap: </label>
+          <input type="checkbox" id="nowrapOption" name="nowrapOption" checked />
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table id="netscapeTable" class="netscape-table nowrap">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Include Subdomains</th>
+              <th>Path</th>
+              <th>Secure</th>
+              <th>Expiry</th>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="donation">
+        <details>
+          <summary>About this Fork / Support ☕</summary>
+          <div class="donation-description">
+            <p><strong>Cookies to TXT</strong> is an optimized, secure, and fully private open-source fork built to run flawlessly on both PC and Firefox Android.</p>
+            <p>If this layout fix and mobile download recovery saved your time, consider supporting the development! 😎</p>
+          </div>
+          <ul class="payment-buttons-container">
+            <li>
+              <a class="payment-button" href="https://ko-fi.com/lexariasdev" target="_blank">
+                <img src="images/kofi_logo.svg" alt="Support me on Ko-fi" />
+              </a>
+            </li>
+            <li>
+              <a class="payment-button" href="https://paypal.me/" target="_blank">
+                <img src="images/paypal-logo.svg" alt="PayPal" /> 
+              </a>
+            </li>
+          </ul>
+        </details>
+      </div>
+    </main>
+  </body>
+</html>

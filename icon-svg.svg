@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Fondo circular estético -->
+  <circle cx="64" cy="64" r="60" fill="#1e1e24" />
+  
+  <!-- Icono de la Galleta (Cookie) -->
+  <path d="M64 16C37.5 16 16 37.5 16 64s21.5 48 48 48 48-21.5 48-48c0-3.5-.4-7-1.1-10.3-1.8.8-3.8 1.3-6 1.3-7.7 0-14-6.3-14-14 0-4.3 2-8.2 5.1-10.8C89.5 18.2 77.2 16 64 16z" fill="#d79a61"/>
+  
+  <!-- Chispas de chocolate -->
+  <circle cx="40" cy="48" r="5" fill="#5c3a21" />
+  <circle cx="52" cy="76" r="6" fill="#5c3a21" />
+  <circle cx="76" cy="84" r="5" fill="#5c3a21" />
+  <circle cx="44" cy="88" r="4" fill="#5c3a21" />
+
+  <!-- Documento de Texto / TXT superpuesto en la esquina inferior derecha -->
+  <rect x="72" y="60" width="40" height="52" rx="4" fill="#4ba3e3" stroke="#1e1e24" stroke-width="3"/>
+  <!-- Líneas simulando renglones de texto -->
+  <line x1="80" y1="72" x2="104" y2="72" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="80" y1="84" x2="104" y2="84" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="80" y1="96" x2="96" y2="96" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>

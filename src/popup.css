@@ -1,0 +1,150 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN POR DEFECTO (Optimizado para Firefox PC)
+   ========================================================================== */
+html {
+  width: 600px;          /* Ancho fijo real para obligar a Firefox PC */
+  height: 700px;         /* Altura fija real para desplegar la ventana completa */
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  background-color: #fdfbff;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit; 
+}
+
+body {
+  margin: 0; 
+  padding: 12px; 
+  font-size: 90%; 
+  width: 100%;    /* Ocupa el 100% de los 600px del html */
+  height: 100%;   /* Ocupa el 100% de los 700px del html */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   2. CONFIGURACIÓN RESPONSIVA (Optimizado para Firefox Android / Móviles)
+   ========================================================================== */
+@media (max-width: 600px) {
+  html {
+    width: 100vw;        /* En el celular se adapta al ancho de la pantalla */
+    height: auto;        /* Deja que el contenido defina la altura de forma natural */
+    max-height: 100vh;   /* Evita desbordamientos en pantallas verticales */
+  }
+
+  body {
+    width: 100%;
+    height: auto;
+    padding: 10px;       /* Un poco más compacto en pantallas táctiles */
+  }
+}
+
+h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+h1 > a#location {
+  color: #3153ee;
+}
+
+main {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.export-btn-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.export-btn {
+  border: none;
+  border-radius: 5px;
+  /* Se aumentó la altura a 3rem (~48px) para cumplir los estándares táctiles de Android */
+  height: 3rem; 
+  font-size: 1rem;
+  touch-action: manipulation; /* Evita retrasos de doble toque en navegadores móviles */
+}
+
+.export-btn > .button-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+/* Modificado para pantallas móviles donde no existe el cursor "hover" tradicional */
+.export-btn:active {
+  filter: brightness(0.85);
+}
+
+.export-btn.large {
+  grid-column: 1 / 4;
+}
+
+.export-btn.export {
+  background-color: #485fc7;
+  color: white;
+}
+
+.export-btn.export-as {
+  background-color: #fee08a;
+  color: black;
+}
+
+.export-btn.copy,
+.export-btn.export-all {
+  background-color: #3f8ecf;
+  color: white;
+}
+
+/* default text */
+.export-btn.copy .default-copy-text {
+  display: flex;
+}
+.export-btn.copy .copied-text {
+  display: none;
+}
+
+/* when copied */
+.export-btn.copy.copied .default-copy-text {
+  display: none;
+}
+.export-btn.copy.copied .copied-text {
+  display: flex;
+}
+
+.table-container {
+  width: 100%;
+  max-height: 50vh; /* Se mantiene excelente para móvil y PC */
+  overflow: auto; /* Mantiene las barras de desplazamiento nativas */
+  margin-top: 4px;
+}
+
+.netscape-table {
+  width: 100%;
+  min-width: 550px; /* ¡La clave! Forza a la tabla a mantener un ancho mínimo interno para que las columnas respiren */
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.netscape-table th {
+  background-color: #f1f3f4; /* Un fondo gris sutil para los títulos en modo claro */
+  font-weight: bold;
+  border: solid 1px black;
+  padding: 6px 4px;
+  white-space: nowrap;
+}
+
+.netscape-table tbody tr:nth-of-type(2n + 1) {
+  background-color: aliceblue;
+}
